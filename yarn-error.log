@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
+  C:\Program Files\nodejs\node.exe C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add typeorn reflect-metadata sqlite3
 
 PATH: 
   D:\DIO\VMW\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\Users\Alfrede\AppData\Local\Microsoft\WindowsApps;;D:\Programas\Microsoft VS Code\bin;C:\Users\Alfrede\AppData\Roaming\npm;C:\Users\Alfrede\.dotnet\tools
@@ -14,12 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\Estudos\Nlw\05\projetoNlw\package.json: Unexpected string in JSON at position 168
-      at JSON.parse (<anonymous>)
-      at C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
-      at C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+  Error: https://registry.yarnpkg.com/typeorn: Not found
+      at Request.params.callback [as _callback] (C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Users\Alfrede\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
@@ -28,7 +33,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
       "dev": "ts-node-dev src/server.ts"
     },
     "keywords": [],
