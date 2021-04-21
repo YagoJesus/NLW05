@@ -4,8 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 #Adição Manual
-package-lock.json
-yarn-error.log
+*.package-lock.json
+*.yarn-error.log
 
 # User-specific files
 *.rsuser
