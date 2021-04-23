@@ -14,3 +14,7 @@ Introduzindo o Banco de Dados
 
 Separar Regra de Negócios
 Continuação do Banco de Dados
+
+### Aula 4
+
+WebSocket
