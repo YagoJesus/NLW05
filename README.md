@@ -18,3 +18,12 @@ Continuação do Banco de Dados
 ### Aula 4
 
 WebSocket
+
+### Aula 5
+
+Projeto Finalizado
+
+### Obs Pessoal
+Trabalhar com salas
+Aprimorar chat
+Mudar Front para Angular
