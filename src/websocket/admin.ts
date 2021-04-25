@@ -2,13 +2,14 @@ import { io } from "../http";
 import { ConnectionsService } from "../services/ConnectionsService";
 import { MessagesService } from "../services/MessagesService";
 
-io.on("connection", async (socket) => {
+io.on("connect", async (socket) => {
     const connectionsService = new ConnectionsService();
     const messagesService = new MessagesService();
 
     const allConnectionsWithoutAdmin = await connectionsService.findAllWithoutAdmin();
 
-    io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
+   // io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
+   io.emit('admin_list_all_users', allConnectionsWithoutAdmin);
 
     socket.on("admin_list_messages_by_user", async (params, callback) => {
         const { user_id } = params;
@@ -35,8 +36,9 @@ io.on("connection", async (socket) => {
         });
     });
 
-    socket.on("admin_user_in_support", async (params) =>{
+    socket.on("admin_user_in_support", async (params) => {
         const { user_id } = params;
+
         await connectionsService.updateAdminID(user_id, socket.id);
 
         const allConnectionsWithoutAdmin = await connectionsService.findAllWithoutAdmin();
